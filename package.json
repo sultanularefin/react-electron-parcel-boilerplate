@@ -2,7 +2,10 @@
     "name": "boilerplate",
     "version": "1.0.0",
     "description": "📦🚀 React Electron Parcel Boilerplate",
-    "main": "src/electron/index.js",
+    "type": "module",
+    "targets": {
+        "main": false
+    },
     "scripts": {
         "start": "node scripts/start.js",
         "electron": "electron .",
@@ -19,17 +22,20 @@
         "@parcel/config-default": "^2.2.1",
         "@parcel/core": "^2.2.1",
         "@parcel/fs": "^2.2.1",
+        "@parcel/optimizer-esbuild": "^2.2.1",
+        "@parcel/reporter-sourcemap-visualiser": "^2.2.1",
+        "@parcel/transformer-sass": "^2.2.1",
+        "@parcel/validator-eslint": "^2.2.1",
+        "@parcel/validator-typescript": "^2.2.1",
         "@types/react": "^17.0.38",
         "@types/react-dom": "^17.0.11",
-        "node-sass": "^7.0.1",
-        "parcel": "^2.2.1",
-        "react": "^17.0.2",
-        "react-dom": "^17.0.2",
         "electron": "11.1.1",
         "electron-packager": "15.2.0",
         "electron-reloader": "1.1.0",
         "electron-winstaller": "4.0.1",
-        "parcel-bundler": "1.12.4"
+        "node-sass": "^7.0.1",
+        "parcel": "^2.2.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
     }
-
 }
