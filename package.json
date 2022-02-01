@@ -3,13 +3,23 @@
     "version": "1.0.0",
     "description": "📦🚀 React Electron Parcel Boilerplate",
     "type": "module",
-    "targets": {
-        "main": false
-    },
     "scripts": {
-        "start": "node scripts/start.mjs",
-        "electron": "node src/electron/dev.mjs",
-        "build": "node scripts/build.js"
+        "start": "node scripts/start.js",
+        "electron": "electron .",
+        "build": "node scripts/build.js",
+        "new": "parcel public/index.html",
+        "analyze": "parcel build public/index.html --reporter @parcel/reporter-bundle-analyzer"
+    },
+    "context": "electron-renderer",
+    "outputFormat": "esmodule",
+    "includeNodeModules": ["react"],
+    "targets": {
+        "frontend": {
+            "source": ["./src/*.html", "./public/index.html"]
+        },
+        "default": {
+            "distDir": "./output"
+        }
     },
     "keywords": [
         "react",
@@ -23,6 +33,7 @@
         "@parcel/core": "^2.2.1",
         "@parcel/fs": "^2.2.1",
         "@parcel/optimizer-esbuild": "^2.2.1",
+        "@parcel/reporter-bundle-analyzer": "^2.2.1",
         "@parcel/reporter-sourcemap-visualiser": "^2.2.1",
         "@parcel/transformer-sass": "^2.2.1",
         "@parcel/validator-eslint": "^2.2.1",
