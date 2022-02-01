@@ -5,21 +5,21 @@
     "...",
      "@parcel/transformer-svg-react"
      ],
-     "*.js": [
+     "*.{js,jsx,ts,tsx,cjs,mjs}": [
      "@parcel/transformer-babel",
       "..."
       ]
   },
    "optimizers": {
-      "*.js": ["@parcel/optimizer-esbuild"]
+      "*.{js,jsx,ts,tsx,cjs,mjs}": ["@parcel/optimizer-esbuild"]
     },
     "reporters": [
     "...",
     "@parcel/reporter-sourcemap-visualiser"
     ],
      "validators": {
-        "*.{js,jsx,ts,tsx}": [
-        "@parcel/validator-eslint",
+        "*.{js,jsx,ts,tsx,cjs,mjs}": [
+        //"@parcel/validator-eslint",
         "@parcel/validator-typescript"
         ]
       }

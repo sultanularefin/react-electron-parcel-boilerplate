@@ -1,4 +1,7 @@
-const { app, BrowserWindow } = require('electron');
+// const { app, BrowserWindow } = require('electron');
+import electron from 'electron';
+const { app, BrowserWindow} = electron;
+
 
 try {
     require('electron-reloader')(module);
