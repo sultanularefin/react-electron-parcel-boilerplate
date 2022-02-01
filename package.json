@@ -2,13 +2,13 @@
     "name": "boilerplate",
     "version": "1.0.0",
     "description": "📦🚀 React Electron Parcel Boilerplate",
-    "type": "module",
+    "type": "commonjs",
     "targets": {
         "main": false
     },
     "scripts": {
-        "start": "node scripts/start.js",
-        "electron": "electron .",
+        "start": "node scripts/start.mjs",
+        "electron": "node src/electron/dev.cjs",
         "build": "node scripts/build.js"
     },
     "keywords": [
